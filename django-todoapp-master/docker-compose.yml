@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   nginx: 
-    image: rajneeshmehta93/nginx-todo:github-NO-SSL
+    image: harshagr63/task1_nginx:latest
     restart: always
     ports:
         - 37831:80
@@ -13,7 +13,7 @@ services:
     depends_on: 
         - backend
   backend:
-    image: rajneeshmehta93/django-todo:github
+    image: harshagr63/task1_main:latest
     restart: always
     expose:
       - 8000
