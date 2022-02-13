@@ -2,8 +2,8 @@ FROM python:slim-buster
 ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 COPY . .
-RUN apt-get update && \
-    apt-get upgrade && \
+RUN apt-get update -y && \
+    apt-get upgrade -y && \
     apt-get install libpq-dev gcc -y && \
     pip3 install --upgrade pip && \
     pip3 install -r requirements.txt --no-cache-dir && \
